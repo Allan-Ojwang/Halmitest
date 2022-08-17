@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .perspective {
+    perspective: 100px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .distance-1 {
+    transform: translateZ(-100px) scale(2);
+  }
+
+  .distance-2 {
+    transform: translateZ(-50px) scale(1.5);
+  }
+}
+
+.background-radial-gradient {
+  background-color: hsl(172, 41%, 15%);
+  background-image: radial-gradient(650px circle at 0% 0%,
+      hsl(172, 41%, 35%) 15%,
+      hsl(172, 41%, 30%) 35%,
+      hsl(172, 41%, 20%) 75%,
+      hsl(172, 41%, 19%) 80%,
+      transparent 100%),
+    radial-gradient(1250px circle at 100% 100%,
+      hsl(172, 41%, 45%) 15%,
+      hsl(172, 41%, 30%) 35%,
+      hsl(172, 41%, 20%) 75%,
+      hsl(172, 41%, 19%) 80%,
+      transparent 100%);
+}
